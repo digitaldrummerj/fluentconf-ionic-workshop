@@ -6,9 +6,7 @@
 * NodeJs -  [http://nodejs.org](http://nodejs.org)
 * Visual Studo Code - [https://code.visualstudio.com/](https://code.visualstudio.com/)
 * Git  -  [https://msysgit.github.io/](https://msysgit.github.io/)
-
     * Note: Mac already has it installed
-    
 * Globally install npm packages:
 
 ```
