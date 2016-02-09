@@ -38,6 +38,7 @@ All of these should return back a version number.
 1. Navigate to where you normally store your project file 
    * I store mine at c:\projects
 1. Run the following command to create the initial project
+
       ionic start todo blank
 
 Here is an example of what your should see when you  run the command
