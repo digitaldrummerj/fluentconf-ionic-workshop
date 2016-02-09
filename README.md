@@ -3,18 +3,18 @@
 This repository will contain all of the materials for the ionic workshop that I am running at [O'Reilly Fluent Conference](http://conferences.oreilly.com/fluent/javascript-html-us).
 
 ## Goal
-----
+
 
 The goal of this workshop is to introduce you to the Ionic Framework and what makes it so cool for developing cross platform mobile application.  You will walk away from the workshop with a completed todo application that stores its data in the cloud.  
 
 ## Who Should Attend
-----
+
 
 If you are a web developer that has a desire to create a mobile application that you can release through the Apple or Google app stores.
 
 
 ## Skills Needed
-----
+
 
 * Html - Beginner
 * Javascript - Intermediate
@@ -23,7 +23,7 @@ If you are a web developer that has a desire to create a mobile application that
 * Using the Command Line - Intermediate
  
 ## Minimum Software to Install
-----
+
 
 * NodeJs -  [http://nodejs.org](http://nodejs.org)
 * Visual Studo Code - [https://code.visualstudio.com/](https://code.visualstudio.com/)
@@ -38,14 +38,14 @@ If you are a web developer that has a desire to create a mobile application that
 ```
 
 ## Optional
-----
+
 
 * Ionic View application for Android or iOS [http://view.ionic.io/](http://view.ionic.io/)
 * Ionic.io account (needed for Ionic View) - [http://ionic.io/](http://ionic.io/)
 
 
 ## Testing Software Installs
-----
+
 
 All of these should return back a version number.
 
@@ -60,7 +60,7 @@ All of these should return back a version number.
 
 
 ## Creating Base Project
-----
+
 
 1. Open a command prompt or terminal
 1. Navigate to where you normally store your project file 
@@ -83,7 +83,7 @@ bower install
 ```
 
 ## Testing Base Project
-----
+
 
 To test that the project is working correctly run
 
