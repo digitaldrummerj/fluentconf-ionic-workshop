@@ -75,12 +75,21 @@ Here is an example of what your should see when you  run the command (animated g
 
 ![Ionic Start Example](IonicStartBlankAnimation.gif)
 
-After the project is succcessfully created, run bower and npm installs
+After the project is succcessfully created, copy the contents of the todo directory that is part of this repo and copy it into your generated project folder.  When prompted overwrite the existing files.  
+
+Then run bower and npm installs
 
 ```
 npm install
 bower install
 ```
+
+Finally, run ionic state restore to pull down the plugins and platforms
+
+```
+ionic state restore
+``` 
+
 
 ## Testing Base Project
 
@@ -91,11 +100,10 @@ To test that the project is working correctly run
 ionic serve
 ```
 
-You should see the web site launch in your default browser and a header that says Ionic Blank Starter
+You should see the web site launch in your default browser and you should see the login screen for the todo app we will be building
 
-Here is an example (animated gif)
 
-![Ionic Serve](IonicServeAnimation.gif)
+![Ionic Serve](ionicServe_initialscreen.png)
 
 
 ## Clone this repository
@@ -103,6 +111,7 @@ Here is an example (animated gif)
 Make sure to clone this repository or download the zip file for it before the talk.  
 
 I will be posting code snippets and samples that we will be using through out the workshop.
+
 
 
 ## See You There
