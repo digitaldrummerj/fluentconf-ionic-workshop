@@ -1,0 +1,17 @@
+Security & Auth
+
+Configuration
+
+1. Enable Anonymous
+2. Change Anonymous to be public so that they can't read anything by default.
+3. Copy Anonymous Token to www\js\config\app.constants.js
+
+Social & Keys
+
+1. Copy API Sign-up Token to www\js\config\app.constants.js
+2. Session Length: 1 day
+3. Enable Github
+4. Enable Google+
+5. Enable Facebook
+
+

@@ -1,0 +1,13 @@
+{
+  "name": "todo-backand",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "inject",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

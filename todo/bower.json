@@ -1,0 +1,10 @@
+{
+  "name": "todo",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "angularbknd-sdk": "^1.8.2"
+  }
+}

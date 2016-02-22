@@ -1,0 +1,3 @@
+Due to bug with backand signup, need to allow public to create in the user table.  If you do not allow this, then when a user signs up they are not created in the users table and are only registered.  This is turn means that you can't associate data to them.  
+
+

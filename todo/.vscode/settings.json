@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"editor.wrappingColumn": 0,
+	"editor.autoClosingBrackets": true,
+	"editor.formatOnType": true,
+	"editor.insertSpaces": "auto",
+	"editor.wrappingIndent": "indent",
+	"files.exclude": {
+		"**/.git": false,
+		"**/.DS_Store": true,
+		"**/node_modules": true,
+		"**/_site": true,
+		"platforms/**": true,
+		"resources/**": true,
+		"plugins/**": true
+	}
+}
