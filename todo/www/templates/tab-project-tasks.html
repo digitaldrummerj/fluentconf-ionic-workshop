@@ -1,8 +1,7 @@
 <ion-view enable-menu-with-back-views="true">
-  <ion-nav-title>Tasks For Project
+  <ion-nav-title>Tasks: {{vm.project.name}}
   </ion-nav-title>
-  <ion-header class="bar bar-stable bar-subheader item-text-wrap">{{vm.project.name}}</ion-header>
-  <ion-content class="has-subheader">
+  <ion-content>
     <ion-list ng-if="vm.tasks.length > 0">
       <ion-item class="item-text-wrap item" ng-repeat=" task in vm.tasks | orderBy: ['completed','name']">
          {{task.name}}
