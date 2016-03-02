@@ -32,13 +32,11 @@
         });
     }
 
-    function addTask(project, taskName) {
-      var task = {
-        "name": taskName,
-        "completed": false,
-        "created_on": new Date(),
-        "project_id": project.id
-      };
+    function addTask(project, task) {
+        task.completed = false;
+        task.created_on = new Date();
+        task.project_id = project.id;
+      
       return BackandDataService.saveItem(objectName, task, { returnObject: true }).then(function (result) {
         return result.data;
       },
