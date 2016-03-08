@@ -1,0 +1,26 @@
+<ion-view enable-menu-with-back-views="true">
+  <ion-nav-title>Tasks: {{vm.project.name}}
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-compose"
+      ng-click="vm.showTaskModal()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+   <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.doRefresh()"></ion-refresher>
+    <ion-list ng-if="vm.tasks.length > 0">
+      <ion-item class="item-text-wrap item item-icon-left item-icon-right" ng-repeat=" task in vm.tasks | orderBy: ['completed','name']"
+      ng-class="{completedTask: task.completed }"
+      >
+         {{task.name}}
+         <i class="icon"
+          ng-class="task.completed ? 'ion-checkmark-circled' : 'ion-ios-circle-outline'
+          "
+          ng-click="vm.completeTask(task, $index)"></i>
+         <i class="ion-close icon icon-accessory"
+          ng-click="vm.deleteTask(task)"></i>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll on-infinite="vm.getMoreTasks()" ng-if="vm.moreDataCanBeLoaded && !vm.refreshing && vm.tasks.length > 0"
+      immediate-check="false"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

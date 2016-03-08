@@ -1,0 +1,49 @@
+<ion-view view-title="Signup" hide-nav-bar="true">
+
+  <ion-content class="padding">
+
+    <div class="row responsive-sm padding removeBP login-div">
+      <div class="col">
+        <div class="app-logo"><img src="img/todo_logo.png"></div>
+        <div class="list removeBP">
+          <form name="loginForm">
+            <label class="item item-input">
+              <input id="email" name="email" required type="email" placeholder="Your email" ng-model="signup.email">
+            </label>
+            <label class="item item-input">
+              <input id="firstname" name="firstname" type="text" placeholder="Your first name" ng-model="signup.firstName">
+            </label>
+            <label class="item item-input">
+              <input id="username" name="lastname" type="text" placeholder="Your last name" ng-model="signup.lastName">
+            </label>
+
+            <label class="item item-input">
+              <input id="password" required name="password" type="password" placeholder="Your password" ng-model="signup.password">
+            </label>
+            <label class="item item-input">
+              <input id="again" required name="again" type="password" placeholder="confirm your password" ng-model="signup.again">
+            </label>
+
+
+          </form>
+        </div>
+        <div class="row padding removePM">
+          <div class="col">
+            <h4 style="color:red;" ng-bind="signup.error"></h4>
+
+          </div>
+        </div>
+
+        <div class="loginButton">
+          <button class="button button-block button-positive" ng-disabled="!loginForm.$valid" ng-click="signup.signup()"> Create Account </button>
+        </div>
+        <div class="row padding removePM centerDiv">
+          <div class="col">
+            <a href="#/login">Cancel</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

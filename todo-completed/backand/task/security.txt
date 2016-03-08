@@ -1,0 +1,41 @@
+Object - task
+
+1. Click on Security Tab
+2. Wizard:
+    Filter project for current user session based on "users" object by "email" field and always show items to admin
+3. Click Get Code
+
+4. The Code Flter Code will auto be filled in with:
+
+{
+  "$or": [
+    {
+      "'{{sys::role}}'": "'Admin'"
+    },
+    {
+      "project_id": {
+        "$in": {
+          "object": "project",
+          "q": {
+            "created_by": {
+              "$in": {
+                "object": "users",
+                "q": {
+                  "email": {
+                    "$eq": "'{{sys::username}}'"
+                  }
+                },
+                "fields": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "fields": [
+            "id"
+          ]
+        }
+      }
+    }
+  ]
+}

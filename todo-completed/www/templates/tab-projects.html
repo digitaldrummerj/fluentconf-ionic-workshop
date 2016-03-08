@@ -1,0 +1,39 @@
+<ion-view title="Projects">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon" ng-click="vm.showProjectModal()">
+      <i class="icon ion-plus"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="vm.doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item class="item item-text-wrap item-icon-right" ng-repeat="project in vm.projects | orderBy:'name'" ui-sref="tab.tasks({
+          projectId: project.id,
+          projectName: project.name
+          })" 
+          ng-style="{'line-height': '50px'}"
+        >
+        <h2>{{project.name}} </h2>
+        <i class="ion-chevron-right icon icon-accessory"></i>
+        <p>created: {{project.created_on}}</p>
+         <ion-option-button class="button-assertive "
+                       ng-click="vm.deleteProject(project) ">
+      Delete
+    </ion-option-button>
+
+      </ion-item>
+    </ion-list>
+      <ion-infinite-scroll on-infinite="vm.getMoreProjects() "
+      ng-if="vm.moreDataCanBeLoaded && !vm.refreshing && vm.projects.length> 0" immediate-check="false" >
+
+        </ion-infinite-scroll>
+        <div class="card" ng-if="vm.projects.length == 0">
+          <div class="item item-text-wrap">
+            You have no projects.
+            <span class="item-text-center">
+        Click <button class="button button-small button-icon icon ion-plus" ng-click="vm.showProjectModal()"></button> to add a new project
+      </span>
+          </div>
+  </ion-content>
+</ion-view>

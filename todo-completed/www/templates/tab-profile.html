@@ -1,0 +1,18 @@
+<ion-view view-title="Me">
+  <ion-content class="padding">
+    <div id="profile">
+
+      <div iv id="content">
+        <div id="profile-info">
+          <h3 id="profile-name">{{vm.details.fullName}}</h3>
+          <span id="profile-description">{{vm.details.username}}</span>
+          <div id="logout-button">
+            <button class="button  button-positive ion-locked" ng-click="vm.signout()"> Logout </button>
+          </div>
+          <br />
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
