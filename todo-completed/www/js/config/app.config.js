@@ -63,14 +63,12 @@ function config(BackandProvider, $stateProvider, $urlRouterProvider, $httpProvid
         }
       }
     })
-
-
-  .state('tab.profile', {
+    .state('tab.profile', {
       url: '/profile',
       views: {
         'tab-profile': {
           templateUrl: 'templates/tab-profile.html',
-          controller: 'ProfileController as vm',
+          controller: 'ProfileController as vm'
         }
       }
     })

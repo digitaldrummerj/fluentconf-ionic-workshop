@@ -32,6 +32,12 @@
     ////////////////
 
     function activate() {
+      $ionicModal
+        .fromTemplateUrl('templates/modal-new-task.html', {
+          scope: $scope
+        }).then(function(modal) {
+          vm.taskModal = modal;
+        })
       // Step 1: Setup the vm.taskModal
 
       // Template is templates/modal-new-task.html
@@ -39,11 +45,7 @@
       // make vm.taskModal equal the modal
 
       // scope is $scope
-      $ionicModal.fromTemplateUrl('templates/modal-new-task.html', {
-        scope: $scope
-      }).then(function(modal) {
-        vm.taskModal = modal;
-      })
+
     }
 
 
@@ -81,40 +83,44 @@
 
     function saveNewTask(task) {
       // Step 1: Call Task Service addTask
+
       // Step 2: In the promise success add the result to vm.tasks array
 
       // Step 2.1: Close the modal using the closeTaskModal function
 
       // Step 2.2: Clear the task name from the passed in task
-      TaskService.addTask(vm.project, task).then(function(result) {
-        vm.tasks.push(result);
-        closeTaskModal();
-        task.name = '';
-      });
+      TaskService.addTask(vm.project, task)
+        .then(function(result) {
+          vm.tasks.push(result);
+          closeTaskModal();
+          task.name = '';
+        })
     }
 
     function completeTask(task) {
       // Step 1: Call the Task Service completeTask
-      TaskService.completeTask(vm.project, task).then(function(result) {
+      TaskService.completeTask(vm.project, task)
+        .then(function(result) {
 
-      });
+        });
     }
 
     function deleteTask(task) {
-      // Step 1: Call TaskService.deleteTask
-
-      // Step 2: Remove data from vm.tasks using the array splice function.      
-      // Hint: to find the location in the array using vm.tasks.indexOf(task)
       $ionicPopup.confirm({
         title: 'Are You Sure?',
-        temlate: 'Are You sure you want to delete this task?'
+        template: 'Are you sure you want to delete this task?'
       }).then(function(res) {
         if (res) {
           TaskService.deleteTask(vm.project, task).then(function(result) {
             vm.tasks.splice(vm.tasks.indexOf(task), 1);
-          });
+          })
         }
-      });
+      })
+
+      // Step 1: Call TaskService.deleteTask
+
+      // Step 2: Remove data from vm.tasks using the array splice function.      
+      // Hint: to find the location in the array using vm.tasks.indexOf(task)
     }
 
     function showTaskModal() {
