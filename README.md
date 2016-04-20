@@ -114,5 +114,6 @@ I will be posting code snippets and samples that we will be using through out th
 
 
 
-## See You There
-See you at the workshop.  If you have any questions before or after the workshop, you can find me one twitter at [http://twitter.com/digitaldrummerj](http://twitter.com/digitaldrummerj) or leave a comment at the Fluent Conference web site under the workshop.
+## Slides
+
+The slides for the workshop include the Ionic overview as well as all of the coding steps is available at [https://slides.com/digitaldrummerj/ionic-workshop-fluent/](https://slides.com/digitaldrummerj/ionic-workshop-fluent/)
