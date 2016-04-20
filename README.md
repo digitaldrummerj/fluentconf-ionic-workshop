@@ -117,3 +117,5 @@ I will be posting code snippets and samples that we will be using through out th
 ## Slides
 
 The slides for the workshop include the Ionic overview as well as all of the coding steps is available at [https://slides.com/digitaldrummerj/ionic-workshop-fluent/](https://slides.com/digitaldrummerj/ionic-workshop-fluent/)
+
+The completed todo list app is in the todo-completed folder.  
